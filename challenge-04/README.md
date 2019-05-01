@@ -151,10 +151,10 @@ carro.obterCor(); // 'verde'
 
 
 // Mude a cor do carro para vermelho.
-carro.mudarCor('amarelo'); // 'Cor do carro alterada para amarelo'
+carro.mudarCor('vermelho'); // 'Cor do carro alterada para vermelho'
 
 // E agora, qual a cor do carro?
-carro.obterCor(); // 'amarelo'
+carro.obterCor(); // 'vermelho'
 
 // Mude a cor do carro para verde musgo.
 carro.mudarCor('verde musgo'); //'Cor do carro alterada para verde musgo'
