@@ -8,8 +8,7 @@ equivalente booleano para o valor passado no argumento for `true`, ou `false`
 para o contrário.
 */
 var isTruthy = function(x) {
-    x ? x = true : x = false;
-    return x;
+    return !!x;
 }
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
@@ -33,9 +32,9 @@ isTruthy(true);
 isTruthy(2);
 isTruthy('0');
 isTruthy("2");
-isTruthy(3);
-isTruthy(4);
-isTruthy(5);
+isTruthy([]);
+isTruthy({});
+isTruthy(function (){});
 
 
 /*
@@ -97,7 +96,7 @@ Crie um método chamado `obterMarcaModelo`, que retorne:
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
 carro.obterMarcaModelo = function(){
-    return 'Esse carro é um ' + carro.marca + ' ' + carro.modelo;
+    return 'Esse carro é um ' + carro.obterMarca() + ' ' + carro.obterModelo();
 }
 
 /*
