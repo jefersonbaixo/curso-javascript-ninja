@@ -41,31 +41,12 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
 */
 var showTeamPosition = function(posicao){
 
-    var timePosicao;
-    
-    switch (posicao) {
-        case 1: 
-            timePosicao = teams[0];
-            break;
-        case 2:
-            timePosicao = teams[1];
-            break;
-        case 3:
-            timePosicao = teams[2];
-            break;
-        case 4:
-            timePosicao = teams[3];
-            break;
-        case 5:
-            timePosicao = teams[4];
-        break;
-
-        default:
-            return ('Não temos a informação do time que está nessa posição.');
-            break;
+    if(posicao < 1 || posicao > 5){
+        return "Não temos a informação do time que está nessa posição."
     }
 
-    return 'O time que está em ' + posicao + 'º lugar é o ' + timePosicao + '.';
+    return 'O time que está em ' + posicao + 'º lugar é o ' + teams[ posicao - 1] + '.';
+
 }
 
 /*
@@ -82,9 +63,9 @@ Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
 repetição "while".
 */
 var count = 20;
-while(count < 30){
-    console.log(count);
-    ++count;
+while(count <= 30){
+    console.log(count++);
+    
 }
 
 /*
