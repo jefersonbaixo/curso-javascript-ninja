@@ -16,7 +16,7 @@ var addItem = function(newItem){
 Adicione um novo array ao array criado no início do desafio, com ao menos 3
 itens de tipos diferentes, mostrando o resultado no console.
 */
-addItem(['segundo array', {carro: 'BMW'}, true]);
+console.log(addItem([{carro: 'BMW'}, 'xyz', true]));
 
 /*
 Mostre no console o segundo elemento desse último array, criado acima, com a
@@ -42,7 +42,7 @@ Utilizando a estrutura de repetição `while`, mostre no console todos os númer
 pares entre 10 e 20, inclusive esses 2.
 */
 var count = 10;
-while (count < 20) {
+while (count <= 20) {
     if(count % 2 === 0){
         console.log(count);
     }
@@ -53,7 +53,7 @@ while (count < 20) {
 Na mesma ideia do exercício acima: mostre agora os números ímpares.
 */
 var count = 10;
-while (count < 19) {
+while (count < 20) {
     if(count % 2 !== 0){
         console.log(count);
     }
