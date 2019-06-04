@@ -69,7 +69,6 @@ function calculator(x, y){
         return callback(x, y);
     }
 }
-
 /*
 Declare uma variável chamada `sum`, e atribua a ela a função `calculator`,
 passando dois números por parâmetro.
