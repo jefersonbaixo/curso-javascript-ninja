@@ -1,4 +1,5 @@
-/*
+(function(){
+    /*
 1. Envolva todo o conteúdo desse desafio em uma IIFE.
 2. Adicione a diretiva 'use strict';
 3. Crie um arquivo index.html e adicione esse script à ele.
@@ -109,3 +110,4 @@ console.log( '\nFazer replace dos textos das tags:' );
 let regex = /<(\w+)>([^<]+)<\/\w+>/g;
 console.log("<h1>Título da página</h1><p>Este é um parágrafo</p><footer>Rodapé</footer>"
     .replace(regex, '<$1>O texto dentro da tag "$1" é "$2".</$1> \n' ));
+})();
