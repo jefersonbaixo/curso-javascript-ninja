@@ -20,25 +20,22 @@ dado ao elemento HTML deve definir o que o elemento é ou o que ele faz.
 let $buttonStart = doc.querySelector('[data-js="start"]');
 let $buttonStop = doc.querySelector('[data-js="stop"]');
 let $buttonReset = doc.querySelector('[data-js="reset"]');
-let $input = doc.querySelector('input');
-let temporizador;
+let $inputTimer = doc.querySelector('[data-js="inputTimer"]');
+let timer;
 
-function timer() {
-
-    $input.value++;
-    temporizador = setTimeout(timer, 1000);
+function startTimer() {
+    $inputTimer.value++;
+    timer = setTimeout(startTimer, 1000);
 }
 
-$buttonStart.addEventListener('click', () => {
-    timer();
-}, false);
+$buttonStart.addEventListener('click', startTimer, false);
 
 $buttonReset.addEventListener('click', () => {
-    $input.value = 0;
+    $inputTimer.value = 0;
 }, false)
 
 $buttonStop.addEventListener('click', () => {
-    clearTimeout(temporizador);
+    clearTimeout(timer);
 }, false)
 
 })(window, document);
