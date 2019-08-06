@@ -11,7 +11,7 @@
 
     let joana = {
       name:'Joana',
-      lastName: 'Silva'
+      lastName: 'Sauro'
     }
 
 
@@ -29,10 +29,10 @@
   */
   console.log( 'O nome das pessoas é:' );
   function getFullName (){
-    console.log(this.name + ' ' + this.lastName);
+    return this.name + ' ' + this.lastName;
   }
-  getFullName.call(jose);
-  getFullName.call(joana);
+  console.log(getFullName.call(jose));
+  console.log(getFullName.call(joana));
   /*
   Crie uma função chamada `sum`. Essa função pode receber uma lista de
   parâmetros variável, e deverá retornar a soma de todos eles.
@@ -43,7 +43,7 @@
   function sum(){
     console.log(arguments);
     let finalSum = Array.prototype.reduce.call( arguments, (acc, curr) => {
-      return acc + curr;
+      return +acc + +curr;
     })
     return finalSum;
   }
@@ -80,14 +80,8 @@
   da string. Mostre a representação em string dessa função no console.
   */
   console.log( '\nFunção que limpa entrada do usuário (somente números):' );
-  function justNumbers(stringToClean){
-    let regex = /([0-9])/g;
-    let newArr = new Array();
-    newArr = stringToClean.match(regex);
-    let numbersArr = newArr.map(value => {
-      return parseInt(value);
-    })
-    return numbersArr;
+  function justNumbers(entry){
+    return entry.replace(/\D+/g, ',').split(',')
   }
 
   /*
